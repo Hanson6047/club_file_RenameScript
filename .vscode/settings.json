@@ -1,0 +1,5 @@
+/*自動啟動虛擬環境*/
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true
+}
