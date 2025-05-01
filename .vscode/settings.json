@@ -1,5 +1,32 @@
 /*自動啟動虛擬環境*/
+
 {
-    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    // 👉 讓終端機🖥️自動執行 Activate.ps1，顯示 (venv)//我爽其實可以不加
+  "terminal.integrated.profiles.windows": {
+    "PowerShell with venv": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "& './venv/Scripts/Activate.ps1'"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell with venv",
+
+  // 👉 讓 Python 擴充套件🧠知道要用 venv 裡的解譯器
+  //右鍵 Run Python File 時才會用對的 Python
+  
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.defaultInterpreterPath": "venv\\Scripts\\python.exe",
     "python.terminal.activateEnvironment": true
+  
 }
+
+/*
+| 模組                | 控制範圍                        | 用你哪段設定？                   |
+|---------------------|----------------------------------|----------------------------------|
+| 🖥️ Terminal Profile | 控制你打開 Terminal 的啟動方式  | `terminal.integrated.*` 這段     |
+| 🧠 Python Extension | 控制執行、Lint、Run Code 的解譯器 | `python.defaultInterpreterPath` 等 |
+*/
