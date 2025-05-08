@@ -1,0 +1,19 @@
+# 🎯 類型（必選）：
+# feat     👉 新增功能
+# fix      👉 修 bug
+# refactor 👉 重構（不影響邏輯）
+# chore    👉 設定檔、建構、工具修補
+# docs     👉 修改文件
+# test     👉 測試程式碼
+# style    👉 格式（不影響程式邏輯）
+
+# 🧾 範例訊息（標準格式）：
+
+✨ feat(gui): 完成 GUI 初始架構
+
+- 建立 ClubFileManagerGUI 多頁籤介面
+- 實作單檔重命名與批次命名預覽功能
+- 建立 test_gui.py 測試 GUI 初始化流程
+- 更新 example_config.xlsx 測試資料
+
+🔧 chore: 新增 run_tests.py 統整測試點
